@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title:
     'GETYSTORE BLOGGING APP - WEBANDESIGNS | GLINCKER | G-NETWORK | GDS K S | GDSKS',
   description:
-    'The Opensource Blogging Application for user to create their own blog and share their knowledge to the world.',
+    'The Opensource Blogging Application for user to create their own blog and share their knowledge.',
   applicationName: 'Getystore Blogging Application',
   keywords: 'Glinweb, GDSKS, WEBANDESIGNS, GDS K S, GLINCKER, CSS Framework',
   robots: 'all',
