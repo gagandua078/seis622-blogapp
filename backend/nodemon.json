@@ -1,7 +1,5 @@
 {
   "env": {
-    "browser": true,
-    "es6": true,
     "DB_USER": "gdsks",
     "DB_PASSWORD": "gdsks123",
     "DB_NAME": "blog",
