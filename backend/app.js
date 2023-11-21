@@ -49,13 +49,7 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    `mongodb+srv://blog.ehzbm92.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`,
-    {
-      user: process.env.DB_USER,
-      pass: process.env.DB_PASSWORD,
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
+    `mongodb+srv://gdsks:gdsks123@blog.ehzbm92.mongodb.net/blog?retryWrites=true&w=majority`
   )
   .then(() => {
     app.listen(5000);
