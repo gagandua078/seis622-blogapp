@@ -1,0 +1,11 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "DB_USER": "gdsks",
+    "DB_PASSWORD": "gdsks123",
+    "DB_NAME": "blog",
+    "GOOGLE_API_KEY": "AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY",
+    "JWT_KEY": "supersecret_dont_share"
+  }
+}

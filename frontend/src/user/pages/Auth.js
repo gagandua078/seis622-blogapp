@@ -9,7 +9,7 @@ import ImageUpload from '../../shared/components/FormElements/ImageUpload';
 import {
   VALIDATOR_EMAIL,
   VALIDATOR_MINLENGTH,
-  VALIDATOR_REQUIRE
+  VALIDATOR_REQUIRE,
 } from '../../shared/util/validators';
 import { useForm } from '../../shared/hooks/form-hook';
 import { useHttpClient } from '../../shared/hooks/http-hook';
@@ -25,12 +25,12 @@ const Auth = () => {
     {
       email: {
         value: '',
-        isValid: false
+        isValid: false,
       },
       password: {
         value: '',
-        isValid: false
-      }
+        isValid: false,
+      },
     },
     false
   );
@@ -41,7 +41,7 @@ const Auth = () => {
         {
           ...formState.inputs,
           name: undefined,
-          image: undefined
+          image: undefined,
         },
         formState.inputs.email.isValid && formState.inputs.password.isValid
       );
@@ -51,33 +51,33 @@ const Auth = () => {
           ...formState.inputs,
           name: {
             value: '',
-            isValid: false
+            isValid: false,
           },
           image: {
             value: null,
-            isValid: false
-          }
+            isValid: false,
+          },
         },
         false
       );
     }
-    setIsLoginMode(prevMode => !prevMode);
+    setIsLoginMode((prevMode) => !prevMode);
   };
 
-  const authSubmitHandler = async event => {
+  const authSubmitHandler = async (event) => {
     event.preventDefault();
 
     if (isLoginMode) {
       try {
         const responseData = await sendRequest(
-          'http://localhost:5000/api/users/login',
+          process.env.REACT_APP_BACKEND_URL + '/users/login',
           'POST',
           JSON.stringify({
             email: formState.inputs.email.value,
-            password: formState.inputs.password.value
+            password: formState.inputs.password.value,
           }),
           {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
           }
         );
         auth.login(responseData.userId, responseData.token);
@@ -90,7 +90,7 @@ const Auth = () => {
         formData.append('password', formState.inputs.password.value);
         formData.append('image', formState.inputs.image.value);
         const responseData = await sendRequest(
-          'http://localhost:5000/api/users/signup',
+          process.env.REACT_APP_BACKEND_URL + '/users/signup',
           'POST',
           formData
         );

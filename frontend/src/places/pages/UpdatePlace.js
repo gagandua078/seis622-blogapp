@@ -8,7 +8,7 @@ import LoadingSpinner from '../../shared/components/UIElements/LoadingSpinner';
 import ErrorModal from '../../shared/components/UIElements/ErrorModal';
 import {
   VALIDATOR_REQUIRE,
-  VALIDATOR_MINLENGTH
+  VALIDATOR_MINLENGTH,
 } from '../../shared/util/validators';
 import { useForm } from '../../shared/hooks/form-hook';
 import { useHttpClient } from '../../shared/hooks/http-hook';
@@ -26,12 +26,12 @@ const UpdatePlace = () => {
     {
       title: {
         value: '',
-        isValid: false
+        isValid: false,
       },
       description: {
         value: '',
-        isValid: false
-      }
+        isValid: false,
+      },
     },
     false
   );
@@ -40,19 +40,19 @@ const UpdatePlace = () => {
     const fetchPlace = async () => {
       try {
         const responseData = await sendRequest(
-          `http://localhost:5000/api/places/${placeId}`
+          `${process.env.REACT_APP_BACKEND_URL}/places/${placeId}`
         );
         setLoadedPlace(responseData.place);
         setFormData(
           {
             title: {
               value: responseData.place.title,
-              isValid: true
+              isValid: true,
             },
             description: {
               value: responseData.place.description,
-              isValid: true
-            }
+              isValid: true,
+            },
           },
           true
         );
@@ -61,19 +61,19 @@ const UpdatePlace = () => {
     fetchPlace();
   }, [sendRequest, placeId, setFormData]);
 
-  const placeUpdateSubmitHandler = async event => {
+  const placeUpdateSubmitHandler = async (event) => {
     event.preventDefault();
     try {
       await sendRequest(
-        `http://localhost:5000/api/places/${placeId}`,
+        `${process.env.REACT_APP_BACKEND_URL}/places/${placeId}`,
         'PATCH',
         JSON.stringify({
           title: formState.inputs.title.value,
-          description: formState.inputs.description.value
+          description: formState.inputs.description.value,
         }),
         {
           'Content-Type': 'application/json',
-          Authorization: 'Bearer ' + auth.token
+          Authorization: 'Bearer ' + auth.token,
         }
       );
       history.push('/' + auth.userId + '/places');
