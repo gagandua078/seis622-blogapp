@@ -58,7 +58,7 @@ const NavBar = (props) => {
           <ul className="navbar-nav ms-auto align-items-center">
             <li className="nav-item">
               <NavLink to="/" exact className="nav-link" onClick={toggleNavbar}>
-                ALL USERS
+                ALL AUTHORS
               </NavLink>
             </li>
             {auth.isLoggedIn && (
@@ -68,7 +68,7 @@ const NavBar = (props) => {
                   className="nav-link"
                   onClick={toggleNavbar}
                 >
-                  MY PLACES
+                  MY POSTS
                 </NavLink>
               </li>
             )}
@@ -79,14 +79,14 @@ const NavBar = (props) => {
                   className="nav-link"
                   onClick={toggleNavbar}
                 >
-                  ADD PLACE
+                  ADD BLOG
                 </NavLink>
               </li>
             )}
             {!auth.isLoggedIn && (
               <li className="nav-item">
                 <NavLink to="/auth" className="nav-link" onClick={toggleNavbar}>
-                  AUTHENTICATE
+                  <button className="btn btn-outline-dark">LOGIN</button>
                 </NavLink>
               </li>
             )}

@@ -28,10 +28,10 @@ const NewPlace = () => {
         value: '',
         isValid: false,
       },
-      address: {
-        value: '',
-        isValid: false,
-      },
+      // address: {
+      //   value: '',
+      //   isValid: false,
+      // },
       image: {
         value: null,
         isValid: false,
@@ -48,7 +48,7 @@ const NewPlace = () => {
       const formData = new FormData();
       formData.append('title', formState.inputs.title.value);
       formData.append('description', formState.inputs.description.value);
-      formData.append('address', formState.inputs.address.value);
+      // formData.append('address', formState.inputs.address.value);
       formData.append('image', formState.inputs.image.value);
       await sendRequest(
         process.env.REACT_APP_BACKEND_URL + '/places',
@@ -84,14 +84,14 @@ const NewPlace = () => {
           errorText="Please enter a valid description (at least 5 characters)."
           onInput={inputHandler}
         />
-        <Input
+        {/* <Input
           id="address"
           element="input"
           label="Address"
           validators={[VALIDATOR_REQUIRE()]}
           errorText="Please enter a valid address."
           onInput={inputHandler}
-        />
+        /> */}
         <ImageUpload
           id="image"
           onInput={inputHandler}
