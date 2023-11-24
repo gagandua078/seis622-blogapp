@@ -4,6 +4,7 @@ import UsersList from '../components/UsersList';
 import ErrorModal from '../../shared/components/UIElements/ErrorModal';
 import LoadingSpinner from '../../shared/components/UIElements/LoadingSpinner';
 import { useHttpClient } from '../../shared/hooks/http-hook';
+import Banner from '../../shared/components/Header/Banner';
 
 const Users = () => {
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
@@ -30,6 +31,7 @@ const Users = () => {
           <LoadingSpinner />
         </div>
       )}
+      <Banner />
       {!isLoading && loadedUsers && <UsersList items={loadedUsers} />}
     </React.Fragment>
   );

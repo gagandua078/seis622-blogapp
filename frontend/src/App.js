@@ -1,9 +1,10 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 import {
   BrowserRouter as Router,
   Route,
   Redirect,
-  Switch
+  Switch,
 } from 'react-router-dom';
 
 import Users from './user/pages/Users';
@@ -11,9 +12,10 @@ import NewPlace from './places/pages/NewPlace';
 import UserPlaces from './places/pages/UserPlaces';
 import UpdatePlace from './places/pages/UpdatePlace';
 import Auth from './user/pages/Auth';
-import MainNavigation from './shared/components/Navigation/MainNavigation';
 import { AuthContext } from './shared/context/auth-context';
 import { useAuth } from './shared/hooks/auth-hook';
+import MainFooter from './shared/components/Footer/MainFooter';
+import NavBar from './shared/components/Navigation/NavBar';
 
 const App = () => {
   const { token, login, logout, userId } = useAuth();
@@ -62,12 +64,14 @@ const App = () => {
         token: token,
         userId: userId,
         login: login,
-        logout: logout
+        logout: logout,
       }}
     >
       <Router>
-        <MainNavigation />
+        {/* <MainNavigation /> */}
+        <NavBar />
         <main>{routes}</main>
+        <MainFooter />
       </Router>
     </AuthContext.Provider>
   );
