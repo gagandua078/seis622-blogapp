@@ -98,7 +98,7 @@ const NewPlace = () => {
           errorText="Please provide an image."
         />
         <Button type="submit" disabled={!formState.isValid}>
-          ADD PLACE
+          ADD POST
         </Button>
       </form>
     </React.Fragment>

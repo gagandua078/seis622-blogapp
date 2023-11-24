@@ -32,7 +32,14 @@ const Users = () => {
         </div>
       )}
       <Banner />
-      {!isLoading && loadedUsers && <UsersList items={loadedUsers} />}
+      {!isLoading && loadedUsers && (
+        <>
+          <center>
+            <h1 className="py-4">Popular Authors</h1>
+          </center>
+          <UsersList items={loadedUsers} />
+        </>
+      )}
     </React.Fragment>
   );
 };
