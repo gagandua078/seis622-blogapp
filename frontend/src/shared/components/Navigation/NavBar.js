@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react';
-import Image from 'next/image';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../context/auth-context';
 
