@@ -15,6 +15,8 @@ import Auth from './user/pages/Auth';
 import { AuthContext } from './shared/context/auth-context';
 import { useAuth } from './shared/hooks/auth-hook';
 import MainFooter from './shared/components/Footer/MainFooter';
+import Contact from './shared/components/Contact';
+import About from './shared/components/About';
 import NavBar from './shared/components/Navigation/NavBar';
 
 const App = () => {
