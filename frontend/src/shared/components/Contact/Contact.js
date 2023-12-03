@@ -5,7 +5,7 @@ const Contact = () => {
 
             <div className="col-6 col-md-2 mb-3">
                 <div className="col-md-6">
-                    <Image src="website-page-contact-us-email-600nw-1958537320.jpg"/>
+                    <img src="website-page-contact-us-email-600nw-1958537320.jpg"/>
                 </div>
               <h5>Email Us!</h5>
               <ul className="contact flex-column">

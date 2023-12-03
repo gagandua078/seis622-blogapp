@@ -6,17 +6,17 @@ const About= () => {
     return (
       <div class = "AboutUs">
         <div class="container">
-            <Image src="Gagan.jpg" height="50px" width="50px" border="1px"/>
+            <img src="Gagan.jpg" height="50px" width="50px" border="1px"/>
             <span>About Gagan</span><br></br>
         </div>
         <div class="container">
             <span>Kristina was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, 
                 the Analytical Engine. She was the first to recognise that the machine had applications beyond pure calculation.</span>
-            <Image src="Kristina.jpg" height="50px" width="50px" border="1px"/>
+            <img src="Kristina.jpg" height="50px" width="50px" border="1px"/>
             <br></br>
         </div>
         <div class="container">
-            <Image src="Jamaal.jpg" height="50px" width="50px" border="1px"/>
+            <img src="Jamaal.jpg" height="50px" width="50px" border="1px"/>
             <span>About Jamaal</span>
             <br></br>
         </div>
