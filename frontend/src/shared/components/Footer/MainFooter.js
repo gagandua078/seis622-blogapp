@@ -4,11 +4,11 @@ import './MainFooter.css';
 
 const MainFooter = () => {
   return (
-    <div className="container">
+    <div className="footer-container">
       <footer className="py-5 footer-margin">
         <div className="row">
-          <div className="col-6 col-md-2 mb-3">
-            <h5>Section</h5>
+          <div className="col-6 col-md-2 mb-3 text-center">
+            <h5>Company</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-muted">
@@ -38,17 +38,17 @@ const MainFooter = () => {
             </ul>
           </div>
 
-          <div className="col-6 col-md-2 mb-3">
-            <h5>Section</h5>
+          <div className="col-6 col-md-2 mb-3 text-center">
+            <h5>Connect With Us</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-muted">
-                  Home
+                  Youtube
                 </a>
               </li>
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-muted">
-                  Features
+                  Facebook
                 </a>
               </li>
               <li className="nav-item mb-2">
@@ -58,53 +58,53 @@ const MainFooter = () => {
               </li>
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-muted">
-                  FAQs
+                  Twitter
                 </a>
               </li>
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-muted">
-                  About
+                  Instagram
                 </a>
               </li>
             </ul>
           </div>
 
-          <div className="col-6 col-md-2 mb-3">
-            <h5>Section</h5>
+          <div className="col-6 col-md-2 mb-3 text-center">
+            <h5>Account</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-muted">
-                  Home
+                  Readlist
                 </a>
               </li>
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-muted">
-                  Features
+                  My Account
                 </a>
               </li>
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-muted">
-                  Pricing
+                  History 
                 </a>
               </li>
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-muted">
-                  FAQs
+                  Logout
                 </a>
               </li>
               <li className="nav-item mb-2">
                 <a href="#" className="nav-link p-0 text-muted">
-                  About
+                  
                 </a>
               </li>
             </ul>
           </div>
 
-          <div className="col-md-5 offset-md-1 mb-3">
+          <div className="col-md-5 offset-md-1 mb-3 d-flex justify-content-center align-items-center">
             <form>
               <h5>Subscribe to our newsletter</h5>
               <p>Monthly digest of whats new and exciting from us.</p>
-              <div className="d-flex flex-column flex-sm-row w-100 gap-2">
+              <div className="d-flex flex-column flex-sm-row w-100 gap-">
                 <label htmlFor="newsletter1" className="visually-hidden">
                   Email address
                 </label>
@@ -154,3 +154,5 @@ const MainFooter = () => {
 };
 
 export default MainFooter;
+
+
