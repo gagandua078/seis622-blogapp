@@ -15,6 +15,8 @@ import Auth from './user/pages/Auth';
 import { AuthContext } from './shared/context/auth-context';
 import { useAuth } from './shared/hooks/auth-hook';
 import MainFooter from './shared/components/Footer/MainFooter';
+import Contact from './shared/components/Contact/Contact';
+import About from './shared/components/About/About';
 import NavBar from './shared/components/Navigation/NavBar';
 
 const App = () => {
@@ -36,6 +38,12 @@ const App = () => {
         </Route>
         <Route path="/places/:placeId">
           <UpdatePlace />
+        </Route>
+        <Route path="/about" exact>
+          <About />
+        </Route>
+        <Route path="/contact" exact>
+          <Contact />
         </Route>
         <Redirect to="/" />
       </Switch>
