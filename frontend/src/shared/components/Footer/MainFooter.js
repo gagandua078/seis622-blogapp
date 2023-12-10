@@ -11,27 +11,27 @@ const MainFooter = () => {
             <h5>Company</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted">
                   Home
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted">
                   Features
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted">
                   Pricing
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted">
                   FAQs
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted">
                   About
                 </a>
               </li>
@@ -42,27 +42,27 @@ const MainFooter = () => {
             <h5>Connect With Us</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted">
                   Youtube
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted">
                   Facebook
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted">
                   Pricing
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted">
                   Twitter
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted">
                   Instagram
                 </a>
               </li>
@@ -73,27 +73,27 @@ const MainFooter = () => {
             <h5>Account</h5>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted">
                   Readlist
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted">
                   My Account
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
-                  History 
+                <a href="/" className="nav-link p-0 text-muted">
+                  History
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                <a href="/" className="nav-link p-0 text-muted">
                   Logout
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="#" className="nav-link p-0 text-muted">
+                {/* <a href="/" className="nav-link p-0 text-muted"> */}
                 <a href="/about" className="nav-link p-0 text-muted">
                   About
                 </a>
@@ -132,23 +132,23 @@ const MainFooter = () => {
           <p>GETYSTORE © 2023 Company, Inc. All rights reserved.</p>
           <ul className="list-unstyled d-flex">
             <li className="ms-3">
-              <a className="link-dark" href="#">
+              <a className="link-dark" href="/">
                 <svg className="bi" width="24" height="24">
-                  <use xlinkHref="#instagram"></use>
+                  <use xlinkHref="/instagram"></use>
                 </svg>
               </a>
             </li>
             <li className="ms-3">
-              <a className="link-dark" href="#">
+              <a className="link-dark" href="/">
                 <svg className="bi" width="24" height="24">
-                  <use xlinkHref="#facebook"></use>
+                  <use xlinkHref="/facebook"></use>
                 </svg>
               </a>
             </li>
             <li className="ms-3">
-              <a className="link-dark" href="#">
+              <a className="link-dark" href="/">
                 <svg className="bi" width="24" height="24">
-                  <use xlinkHref="#facebook"></use>
+                  <use xlinkHref="/facebook"></use>
                 </svg>
               </a>
             </li>
@@ -160,5 +160,3 @@ const MainFooter = () => {
 };
 
 export default MainFooter;
-
-

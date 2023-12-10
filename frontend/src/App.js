@@ -40,12 +40,6 @@ const App = () => {
         <Route path="/places/:placeId">
           <UpdatePlace />
         </Route>
-        <Route path="/about" exact>
-          <About />
-        </Route>
-        <Route path="/contact" exact>
-          <Contact />
-        </Route>
         <Redirect to="/" />
       </Switch>
     );
@@ -57,6 +51,12 @@ const App = () => {
         </Route>
         <Route path="/:userId/places" exact>
           <UserPlaces />
+        </Route>
+        <Route path="/about" exact>
+          <About />
+        </Route>
+        <Route path="/contact" exact>
+          <Contact />
         </Route>
         <Route path="/auth">
           <Auth />

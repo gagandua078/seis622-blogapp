@@ -5,7 +5,12 @@ import { Dropdown } from 'react-bootstrap';
 // Font awesome Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+  faAddressCard,
+  faContactBook,
+  faContactCard,
   faEdit,
+  faPenToSquare,
+  faPerson,
   faPlus,
   faSignOutAlt,
   faUserCircle,
@@ -77,7 +82,7 @@ const NavBar = (props) => {
                 className="nav-link"
                 onClick={toggleNavbar}
               >
-                About
+                <FontAwesomeIcon icon={faPerson} /> About
               </NavLink>
             </li>
             <li className="nav-item">
@@ -87,20 +92,9 @@ const NavBar = (props) => {
                 className="nav-link"
                 onClick={toggleNavbar}
               >
-                Contact
+                <FontAwesomeIcon icon={faAddressCard} /> Contact
               </NavLink>
             </li>
-            {auth.isLoggedIn && (
-              <li className="nav-item">
-                <NavLink
-                  to={`/${auth.userId}/places`}
-                  className="nav-link"
-                  onClick={toggleNavbar}
-                >
-                  Posts
-                </NavLink>
-              </li>
-            )}
             {auth.isLoggedIn && (
               <li className="nav-item">
                 <NavLink
@@ -108,7 +102,7 @@ const NavBar = (props) => {
                   className="nav-link"
                   onClick={toggleNavbar}
                 >
-                  Create
+                  <FontAwesomeIcon icon={faPenToSquare} /> Create
                 </NavLink>
               </li>
             )}
@@ -134,11 +128,11 @@ const NavBar = (props) => {
                       </div>
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                      <Dropdown.Item href="#profile">
+                      <Dropdown.Item
+                        href={`/${auth.userId}/places`}
+                        onClick={toggleNavbar}
+                      >
                         <FontAwesomeIcon icon={faEdit} /> &nbsp; Posts
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#settings">
-                        <FontAwesomeIcon icon={faPlus} /> &nbsp; Create
                       </Dropdown.Item>
                       <Dropdown.Item href="#logout" onClick={auth.logout}>
                         <FontAwesomeIcon icon={faSignOutAlt} /> &nbsp; Logout
