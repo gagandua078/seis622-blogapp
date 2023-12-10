@@ -6,6 +6,7 @@ import {
   Redirect,
   Switch,
 } from 'react-router-dom';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 import Users from './user/pages/Users';
 import NewPlace from './places/pages/NewPlace';

@@ -78,6 +78,14 @@ You will be able to see Node JS Server running
   npm run start
 ```
 
+1.5.1 Note
+
+```bash
+If you get permision denied try this commad first -
+``
+sudo npm install -g nodemon
+```
+
 1.6 Paste this URL in browser
 
 ```bash

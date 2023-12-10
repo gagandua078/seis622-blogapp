@@ -1,29 +1,36 @@
 import React from 'react';
+import contactImage from '../../../assets/contact.jpg';
+import './Contact.css'; // Your CSS file for Contact component styling
 
 const Contact = () => {
-    return (
+  return (
+    <div className="contact-container">
+      <div className="contact-banner">
+        <div className="contact-banner-image">
+          <img src={contactImage} alt="Contact" />
+        </div>
+      </div>
+      <div className="contact-info">
+        <div className="contact-banner-text">
+          <h3>Email Us!</h3>
+        </div>
+        <ul className="contact-list">
+          <li className="contact-item">
+            <span className="contact-icon">&#9993;</span>
+            <a href="mailto:webmaster@example.com">Gagan Deep Singh</a>
+          </li>
+          <li className="contact-item">
+            <span className="contact-icon">&#9993;</span>
+            <a href="mailto:webmaster@example.com">Kristina Stern</a>
+          </li>
+          <li className="contact-item">
+            <span className="contact-icon">&#9993;</span>
+            <a href="mailto:webmaster@example.com">Jamaal Mohamud</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-            <div className="col-6 col-md-2 mb-3">
-                <div className="col-md-6">
-                    <img src="website-page-contact-us-email-600nw-1958537320.jpg"/>
-                </div>
-              <h5>Email Us!</h5>
-              <ul className="contact flex-column">
-                <li className="contact item mb-2">
-                  <a href="mailto:webmaster@example.com">Gagan Deep Singh</a>
-                </li>
-                <li className="contact item mb-2">
-                    <a href="mailto:webmaster@example.com">Kristina Stern</a>
-                </li>
-                <li className="contact item mb-2">
-                <a href="mailto:webmaster@example.com">Jamaal Mohamud</a>
-                </li>
-              </ul>
-            </div>
-  
-
-    );
-  };
-  
-  export default Contact;
-  
+export default Contact;
