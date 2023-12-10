@@ -1,6 +1,15 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../context/auth-context';
+import { Dropdown } from 'react-bootstrap';
+// Font awesome Icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faEdit,
+  faPlus,
+  faSignOutAlt,
+  faUserCircle,
+} from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = (props) => {
   const auth = useContext(AuthContext);
@@ -58,7 +67,27 @@ const NavBar = (props) => {
           <ul className="navbar-nav ms-auto align-items-center">
             <li className="nav-item">
               <NavLink to="/" exact className="nav-link" onClick={toggleNavbar}>
-                ALL AUTHORS
+                Authors
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to="/about"
+                exact
+                className="nav-link"
+                onClick={toggleNavbar}
+              >
+                About
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to="/contact"
+                exact
+                className="nav-link"
+                onClick={toggleNavbar}
+              >
+                Contact
               </NavLink>
             </li>
             {auth.isLoggedIn && (
@@ -68,7 +97,7 @@ const NavBar = (props) => {
                   className="nav-link"
                   onClick={toggleNavbar}
                 >
-                  MY POSTS
+                  Posts
                 </NavLink>
               </li>
             )}
@@ -79,7 +108,7 @@ const NavBar = (props) => {
                   className="nav-link"
                   onClick={toggleNavbar}
                 >
-                  ADD BLOG
+                  Create
                 </NavLink>
               </li>
             )}
@@ -91,11 +120,33 @@ const NavBar = (props) => {
               </li>
             )}
             {auth.isLoggedIn && (
-              <li className="nav-item">
-                <button className="btn btn-outline-dark" onClick={auth.logout}>
-                  LOGOUT
-                </button>
-              </li>
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item dropdown">
+                  <Dropdown>
+                    <Dropdown.Toggle
+                      variant="link"
+                      id="profile-dropdown"
+                      className="profile-toggle"
+                    >
+                      <div className="profile-icon">
+                        <FontAwesomeIcon icon={faUserCircle} size="2x" />
+                        <span className="profile-text">Profile</span>
+                      </div>
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                      <Dropdown.Item href="#profile">
+                        <FontAwesomeIcon icon={faEdit} /> &nbsp; Posts
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#settings">
+                        <FontAwesomeIcon icon={faPlus} /> &nbsp; Create
+                      </Dropdown.Item>
+                      <Dropdown.Item href="#logout" onClick={auth.logout}>
+                        <FontAwesomeIcon icon={faSignOutAlt} /> &nbsp; Logout
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </li>
+              </ul>
             )}
           </ul>
         </div>

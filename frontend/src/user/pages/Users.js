@@ -35,7 +35,7 @@ const Users = () => {
       {!isLoading && loadedUsers && (
         <>
           <center>
-            <h1 className="py-4">Popular Authors</h1>
+            <h1 className="py-4">Popular Post from Authors</h1>
           </center>
           <UsersList items={loadedUsers} />
         </>

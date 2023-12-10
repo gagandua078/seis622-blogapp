@@ -1,29 +1,53 @@
 import React from 'react';
 
-import './About.css';
-
-const About= () => {
-    return (
-      <div class = "AboutUs">
-        <div class="container">
-            <img src="Gagan.jpg" height="50px" width="50px" border="1px"/>
-            <span>About Gagan</span><br></br>
-        </div>
-        <div class="container">
-            <span>Kristina was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, 
-                the Analytical Engine. She was the first to recognise that the machine had applications beyond pure calculation.</span>
-            <img src="Kristina.jpg" height="50px" width="50px" border="1px"/>
-            <br></br>
-        </div>
-        <div class="container">
-            <img src="Jamaal.jpg" height="50px" width="50px" border="1px"/>
-            <span>About Jamaal</span>
-            <br></br>
-        </div>
-      </div>
-  
-
-    );
+const About = () => {
+  const containerStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '20px',
   };
-  
-  export default About;
+
+  const itemStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    marginBottom: '20px',
+  };
+
+  const avatarStyle = {
+    width: '50px',
+    height: '50px',
+    border: '1px solid #000',
+    borderRadius: '50%',
+    marginRight: '10px',
+  };
+
+  const spanStyle = {
+    fontSize: '18px',
+  };
+
+  return (
+    <div style={containerStyle}>
+      <div style={itemStyle}>
+        <img src="Gagan.jpg" alt="Gagan" style={avatarStyle} />
+        <span style={spanStyle}>About Gagan</span>
+      </div>
+      <div style={itemStyle}>
+        <span>
+          Kristina was an English mathematician and writer, chiefly known for
+          her work on Charles Babbage's proposed mechanical general-purpose
+          computer, the Analytical Engine. She was the first to recognize that
+          the machine had applications beyond pure calculation.
+        </span>
+        <img src="Kristina.jpg" alt="Kristina" style={avatarStyle} />
+      </div>
+      <div style={itemStyle}>
+        <img src="Jamaal.jpg" alt="Jamaal" style={avatarStyle} />
+        <span style={spanStyle}>About Jamaal</span>
+      </div>
+    </div>
+  );
+};
+
+export default About;
