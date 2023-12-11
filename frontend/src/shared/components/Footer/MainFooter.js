@@ -16,23 +16,18 @@ const MainFooter = () => {
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted">
-                  Features
+                <a href="/about" className="nav-link p-0 text-muted">
+                  About
                 </a>
               </li>
               <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted">
-                  Pricing
+                <a href="/contact" className="nav-link p-0 text-muted">
+                  Contact
                 </a>
               </li>
               <li className="nav-item mb-2">
                 <a href="/" className="nav-link p-0 text-muted">
                   FAQs
-                </a>
-              </li>
-              <li className="nav-item mb-2">
-                <a href="/" className="nav-link p-0 text-muted">
-                  About
                 </a>
               </li>
             </ul>

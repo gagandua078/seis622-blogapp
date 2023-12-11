@@ -40,6 +40,12 @@ const App = () => {
         <Route path="/places/:placeId">
           <UpdatePlace />
         </Route>
+        <Route path="/about" exact>
+          <About />
+        </Route>
+        <Route path="/contact" exact>
+          <Contact />
+        </Route>
         <Redirect to="/" />
       </Switch>
     );

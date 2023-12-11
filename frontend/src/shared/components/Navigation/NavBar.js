@@ -6,12 +6,9 @@ import { Dropdown } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faAddressCard,
-  faContactBook,
-  faContactCard,
   faEdit,
   faPenToSquare,
   faPerson,
-  faPlus,
   faSignOutAlt,
   faUserCircle,
 } from '@fortawesome/free-solid-svg-icons';
